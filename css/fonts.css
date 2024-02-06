@@ -1,0 +1,49 @@
+@font-face {
+    font-family: tomaso ;
+    src: url("../fonts/alk-tommaso-webfont.ttf");
+}
+@font-face {
+    font-display: nino-mt;
+    src: url("../fonts/bpg-nino-mtavruli-bold-webfont.ttf");
+}
+@font-face {
+    font-display: racha;
+    src: url("../fonts/gugeshashvili-rachveli-webfont.ttf");
+}
+@font-face {
+    font-family: mg-glaho-drunk ;
+    src: url("../fonts/mg-glaho-drunk-webfont.svg");
+}
+@font-face {
+    font-family: algeti ;
+    src: url("../fonts/bpg-algeti-webfont.ttf");
+}
+@font-face {
+    font-family: dejavu;
+    src: url("../fonts/dejavu-sans-bold-webfont.ttf");
+}
+@font-face {
+    font-family: grotesk;
+    src: url("../fonts/neuzeit_grotesk_bold (1).otf");
+}
+.drunk {
+    font-family: mg-glaho-drunk;
+}
+.tomaso {
+    font-family: tomaso;
+}
+.algeti {
+    font-family: algeti;
+}
+.dejavu {
+    font-family: dejavu;
+}
+.grotesk {
+    font-family: grotesk;
+}
+.nino-mt {
+    font-family: nino-mt;
+}
+.racha {
+    font-family: racha;
+}

@@ -1,0 +1,22 @@
+@media screen and (max-width: 840px) {
+     .st img {
+         width: 100%;
+     }
+}
+@media screen and (max-width: 500px) {
+    .fixed-menu {
+        display: none;
+    }
+    .about-content {
+        height: 380px;
+    }
+    .p-container img {
+        height: 100%;
+        width: 100% !important;
+        padding: 15px 5px 0;
+    }
+    .name-p {
+        top: 15px;
+    }
+
+}
