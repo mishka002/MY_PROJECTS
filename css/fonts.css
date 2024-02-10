@@ -3,11 +3,11 @@
     src: url("../fonts/alk-tommaso-webfont.ttf");
 }
 @font-face {
-    font-display: nino-mt;
-    src: url("../fonts/bpg-nino-mtavruli-bold-webfont.ttf");
+    font-family: nino-mt;
+    src: url("../fonts/bpg-nino-mkhedruli-bold-webfont.ttf");
 }
 @font-face {
-    font-display: racha;
+    font-family: racha;
     src: url("../fonts/gugeshashvili-rachveli-webfont.ttf");
 }
 @font-face {

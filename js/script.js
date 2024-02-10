@@ -1,148 +1,59 @@
-// show porfolios
-// makes the parallax elements
-function parallaxIt() {
-    // create variables
-    var $fwindow = $(window);
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+// main pagination
 
-    var $contents = [];
-    var $backgrounds = [];
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    // for each of content parallax element
-    $('[data-type="content"]').each(function(index, e) {
-        var $contentObj = $(this);
 
-        $contentObj.__speed = ($contentObj.data('speed') || 1);
-        $contentObj.__fgOffset = $contentObj.offset().top;
-        $contents.push($contentObj);
-    });
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-    // for each of background parallax element
-    $('[data-type="background"]').each(function() {
-        var $backgroundObj = $(this);
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
 
-        $backgroundObj.__speed = ($backgroundObj.data('speed') || 1);
-        $backgroundObj.__fgOffset = $backgroundObj.offset().top;
-        $backgrounds.push($backgroundObj);
-    });
-
-    // update positions
-    $fwindow.on('scroll resize', function() {
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        $contents.forEach(function($contentObj) {
-            var yPos = $contentObj.__fgOffset - scrollTop / $contentObj.__speed;
-
-            $contentObj.css('top', yPos);
-        })
-
-        $backgrounds.forEach(function($backgroundObj) {
-            var yPos = -((scrollTop - $backgroundObj.__fgOffset) / $backgroundObj.__speed);
-
-            $backgroundObj.css({
-                backgroundPosition: '100% ' + yPos + 'px'
-            });
-        });
-    });
-
-    // triggers winodw scroll for refresh
-    $fwindow.trigger('scroll');
-};
-
-parallaxIt();
 // end
+function homepg() {
+    document.title = "M PRODUCTION | Home";
+}
+function aboutpg() {
+    document.title = "M PRODUCTION | About";
+}
+function supportpg() {
+    document.title = "M PRODUCTION | Service";
+}
+function porfospg() {
+    document.title = "M PRODUCTION | Porfolio's";
+}
+function staffpg() {
+    document.title = "M PRODUCTION | Staff's";
+}
+function contactpg() {
+    document.title = "M PRODUCTION | Contact";
+}
 
-// welcome
+// progress bar
 
-(function($) {
-    var s,
-        spanizeLetters = {
-            settings: {
-                letters: $('.js-spanize'),
-            },
-            init: function() {
-                s = this.settings;
-                this.bindEvents();
-            },
-            bindEvents: function(){
-                s.letters.html(function (i, el) {
-                    //spanizeLetters.joinChars();
-                    var spanizer = $.trim(el).split("");
-                    return '<span>' + spanizer.join('</span><span>') + '</span>';
-                });
-            },
-        };
-    spanizeLetters.init();
-})(jQuery);
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
 
 // end
 
-$(function () {
-    $(".mail, .exit").click(function () {
-        $(".email").toggle(1000)
-    })
-})
-
-function openNav() {
-    document.getElementById("mySidenav").style.display = "block";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.display = "none";
-}
-// alert("საიტი მუშაობს სატესტო ვერსიად" )
-function myFunction1() {
-    var element = document.getElementById("f1");
-    element.classList.toggle("f1");
-}
-function myFunction2() {
-    var element = document.getElementById("f2");
-    element.classList.toggle("f1");
-}
-function myFunction3() {
-    var element = document.getElementById("f3");
-    element.classList.toggle("f1");
-}
-
-// bands list
-
-function bands_open() {
-    var answers = document.getElementById("anwers");
-    answers.style.display = "block";
-}
-function no() {
-    var answers_no = document.getElementById("anwers");
-    answers_no.style.display = "none";
-}
-function yes() {
-    var list_show = document.getElementById("list_b")
-    list_show.style.display = "block"
-}
-function exit() {
-    var answers_also = document.getElementById("anwers")
-    var list_none = document.getElementById("list_b")
-    list_none.style.display = "none";
-    answers_also.style.display = "none"
-}
-// end
-function exitVideo() {
-    var video_modal = document.getElementById("video-modal")
-    video_modal.style.display = "none"
-
-
-}
-function music_show() {
-    var element = document.getElementById("audio-section");
-    element.classList.toggle("audio-show");
-
-}
-
-function videoshow() {
-    var video = document.getElementById("video-contents");
-    video.classList.toggle("videotoggle");
-}
-// video
-
-
-
-// end

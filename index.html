@@ -6,507 +6,292 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel='stylesheet' href='css/plyr.css'>
-    <link rel="stylesheet" href="css/templatemo-style.css">
-    <link rel="stylesheet" href="css/audio.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="images/m-logo.png">
-    <title>M PRODUCTION</title>
+    <link rel="icon" href="img/m-logo.png">
+    <title>M PRODUCT... | მთავარი</title>
 </head>
 <body>
     <header>
-        <div id="mySidenav" class="sidenav" style="padding: 145px 0">
+        <div id="mySidenav" class="sidenav" style="padding: 45px 0">
             <ul>
                 <li><a href="javascript:void(0)" class="closebtn" style="font-size: 30px" onclick="closeNav()">&times;</a></li>
-                <li><a href="#home">მთავარი</a></li>
-                <li><a href="#about">შესახებ</a></li>
-                <li><a href="#support">მომსახურეობა</a></li>
-                <li><a href="#porfolios">ნამუშევარი</a></li>
-                <li><a href="#staffs">გუნდი</a></li>
-                <li><a href="#contact">კონტაქტი</a></li>
+                <li><a href="#home" onclick="homepg()">მთავარი</a></li>
+                <li><a href="#about" onclick="aboutpg()">შესახებ</a></li>
+                <li><a href="#support" onclick="supportpg()">მომსახურეობა</a></li>
+                <li><a href="#porfolios" onclick="porfospg()">ნამუშევარი</a></li>
+                <li><a href="#staffs" onclick="staffpg()">გუნდი</a></li>
+                <li><a href="#contact" onclick="contactpg()">კონტაქტი</a></li>
+                <div class="line" style="margin: auto"></div>
+                <li><a href="#"><img src="img/uk.svg" width="50" alt=""></a></li>
             </ul>
         </div>
-        <span style="font-size: 30px;cursor: pointer;color: white;top: 0;left: 0;padding: 0 0 0 7px;position: fixed;z-index: 1" class="samizoli" onclick="openNav()">&#9776;</span>
+        <span style="font-size: 30px;cursor: pointer;color: white;top: 0;left: 0;padding: 0 0 0 7px;position: fixed;z-index: 201" onclick="openNav()" id="openav">&#9776;</span>
     </header>
-    <div>
-        <div class="fixed-menu">
-            <span><img src="images/logo-aethers-1.png" width="150" alt="" style="border-radius: 10px" onmouseover="bands_open()" id="hover-img"></span>
-        </div>
-        <div id="anwers">
-            <h3>გაინტერესებს ბენდის შესახებ?</h3>
-            <hr style="width: 250px;background: #1b1e21;margin:15px auto">
-            <button onclick="yes()" class="btn badge-success">&#x2713;</button>
-            <button onclick="no()" class="btn badge-danger">&#10007;</button>
-        </div>
-        <div id="list_b">
-            <div class="list-bends">
-                <div class="headers-bands">
-                    <button onclick="exit()" class="btn badge-success position-fixed">&#10007;</button>
-
-                </div>
-                <div class="body-bands">
-                    <div class="about-txt">
-                        <h2>შესახებ</h2>
-                        <p>
-                            AETHERS არის საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა,
-                            როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა. მისი ტექსტი არამარტო 5 საუკუნის
-                            მანძილზე შემორჩა, არამედ მან დღემდე, ელექტრონული ტიპოგრაფიის დრომდეც უცვლელად მოაღწია.
-                            განსაკუთრებული პოპულარობა მას 1960-იან წლებში გამოსულმა Letraset-ის ცნობილმა ტრაფარეტებმა მოუტანა,
-                            უფრო მოგვიანებით კი — Aldus PageMaker-ის ტიპის საგამომცემლო პროგრამებმა,
-                            რომლებშიც Lorem Ipsum-ის სხვადასხვა ვერსიები იყო ჩაშენებული.
-                        </p>
-                        <hr style="width: 50%;margin:15px auto;background: #818181">
-                        <button class="btn btn-outline-light algeti" onclick="music_show()">აუდიო გალერია</button>
-                    </div>
-                    <div class="rows">
-                        <div class="col-12">
-                            <div style="width:550px; margin:20px auto 50px">
-                                <img src="images/logo-aethers-1.png" width="100%" alt="" style="border-radius: 5px">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rows">
-                        <div class="col-sm-12 col-md-3 list-B">
-                            <img src="images/person-2.jpg" alt="">
-                            <div class="name-B">
-                                <h3>გიორგი ცხოვრებაძე</h3>
-                                <h6>ხელმძღვანელი</h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-3 list-B">
-                            <img src="images/person-3.jpg" alt="">
-                            <div class="name-B">
-                                <h3>გიორგი ცხოვრებაძე</h3>
-                                <h6>ხელმძღვანელი</h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-3 list-B">
-                            <img src="images/person-4.jpg" alt="">
-                            <div class="name-B">
-                                <h3>გიორგი ცხოვრებაძე</h3>
-                                <h6>ხელმძღვანელი</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rows" style="margin: 130px 0">
-                        <div class="col-sm-12 col-md-3 list-B">
-                            <img src="images/person-1.jpg" alt="">
-                            <div class="name-B">
-                                <h3>გიორგი ცხოვრებაძე</h3>
-                                <h6>ხელმძღვანელი</h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-3 list-B">
-                            <img src="images/person-2.jpg" alt="">
-                            <div class="name-B">
-                                <h3>გიორგი ცხოვრებაძე</h3>
-                                <h6>ხელმძღვანელი</h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-3 list-B">
-                            <img src="images/person-3.jpg" alt="">
-                            <div class="name-B">
-                                <h3>გიორგი ცხოვრებაძე</h3>
-                                <h6>ხელმძღვანელი</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
+    <div class="progress-bars">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
         </div>
     </div>
-    <div id="video-contents" class="rows">
-        <div id="video-container">
-            <div class="video-overlay"></div>
-            <div class="video-content">
-                <div class="inners tomaso">
-                    <h1>კინო მატოგრაფია</h1>
-                    <h3 style="color: white">ნამუშევრები</h3>
-                    <div class="scroll-icon">
-                       <img src="images/arrow-down.svg" width="80" alt="">
-                    </div>
-                </div>
-            </div>
-            <video autoplay="" loop="" muted>
-                <source src="video/highway-loop.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <div class="full-screen-portfolio" id="portfolio">
-            <div class="container-fluid rows">
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb" >
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>ტიტანიკი <em>2</em></h1>
-                                    <p>BY M PRODUCTION </p>
-                                    <p data-toggle="modal" data-target="#myModal_1">Launch demo modal</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-1.jpg"alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="modal fade" id="myModal_1" role="dialog">
-                        <div class="modal-dialog">
-
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Modal Header</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Some text in the modal.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/video-cover-2.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>raclette <em>taxidermy</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-2.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/video-cover-3.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>humblebrag <em>brunch</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-3.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/video-cover-4.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>Succulents <em>chambray</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-4.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="img/images/video-cover-1.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>freegan <em>aesthetic</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-1.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/video-cover-2.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>taiyaki <em>vegan</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-2.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/video-cover-3.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>Thundercats <em>santo</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-3.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/video-cover-4.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>wayfarers <em>yuccie</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-4.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="images/video-cover-1.jpg" data-lightbox="image-1"><div class="thumb">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1>disrupt <em>street</em></h1>
-                                    <p>Awesome Subtittle Goes Here</p>
-                                </div>
-                            </div>
-                            <div class="image">
-                                <img src="images/video-cover-1.jpg">
-                            </div>
-                        </div></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="home" class="section-fade-in" style="background: url(images/photo-3.jpg);background-size: cover"  data-type="background" data-speed="2">
-        <div class="home-content" data-type="content">
-            <div style=" width:300px;padding: 10% 0 0 0;margin: auto">
-                <img src="images/m-logo-trsp.png" width="300" style="margin: 10% auto " alt="">
-                <div style="width:50px;margin: 0 auto;">
-                    <img src="images/arrow-down.svg" alt="" width="100%">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="about" class="section-fade-in rows" style="background: url(images/photo-1576768324656-b8f41d7457f1.jpg);background-size: cover"  data-type="background" data-speed="2">
-        <div class="about-content " data-type="content">
-            <div class="text-about">
-                <h3 class="text-center tomaso">შესახებ</h3>
-                <div class="text algeti">
-                     M PRODUCTION არის უნივერსალური მომსახურეობა რომელიც გთავაზობთ, არა მარტო ვებ დეველოპერიას ასევე ვიდეო რგოლების დამზადებას.
-                     ჩვენი ნამუშევრები არის დამზადებული ლიცენზირებული პროგრამებით, როგორიცაა WebStorm, Adobe - ეს ნაწარმი და Magix.
-                     ხოლო ჩვენი ტექნოლოგია არის ვებ საიტის დარგში: HTML, CSS, JavaScript, JQUERY
-                    <hr style="width: 50px;margin: 15px auto;background: #1d2124; ">
-                    ჩვენი პარტნიორი "AETHERS",
-                    <br>
-                    <button class="btn btn-outline-light algeti" onclick="yes()">შესახებ</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="support" class="section-fade-in" style="background: #252b37"   data-type="background" data-speed="2">
-        <div class="support-content" style="padding: 12% 0 0 0 " data-type="content">
-            <h3 class="tomaso text-center ">მომსახურეობა</h3>
-            <hr style="width: 200px;margin: 7px auto ;height: 1px; background:#c5623e ">
-            <div class="s-content">
-                <div class="rows">
-                    <div class="col-md-3 col-sm-12 support-content">
-                        <div class="web-content" style="background: url(images/photo-5.jpg) no-repeat 100%">
-                            <p class="dejavu text-center ">ვებ მომსახურეობა</p>
-                            <hr style="width: 50px;margin: 7px auto ;height: 1px; background:#c5623e ">
-                            <ul class="text-center tomaso " style="font-size: 20px">
-                                <li>ვებ დიზაინერი</li>
-                                <li>პროგრამისტი</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 support-content">
-                        <div class="video-contents" style="background: url(images/photo-6.jpg) no-repeat 100%">
-                            <p class="dejavu text-center">კინო მატოგრაფია</p>
-                            <hr style="width: 50px;margin: 7px auto ;height: 1px; background:#c5623e ">
-                            <ul class="text-center tomaso " style="font-size: 20px">
-                                <li>რეჟისორი</li>
-                                <li>ვიდეო მემონთაჟე-გრაფიკოსი</li>
-                                <li>გადამღები ჯგუფი</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 support-content">
-                        <div class="audio-content" style="background: url(images/photo-6.jpg)  no-repeat 100%">
-                            <p class="dejavu text-center">მუსიკა</p>
-                            <hr style="width: 50px;margin: 7px auto ;height: 1px; background:#c5623e ">
-                            <ul class="text-center tomaso " style="font-size: 20px">
-                                <li>კომპოზიტორი</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="porfolios" class="section-fade-in rows" style="background: #5F7462" data-type="background" data-speed="2">
-        <div class="porfos-content" data-type="content">
-            <h3 class="tomaso text-center " style="padding: 10% 0 0 0">ნამუშევრები</h3>
-            <hr style="width: 200px;margin: auto ;height: 1px; background:#c5623e ">
-            <div class="p-content rows">
-                <div class="col-md-4 col-sm-12 p-container">
-                    <img src="images/progress-logo.png"  alt="">
-                    <h4 class="name-p">Progres Project</h4>
-                    <div class="show-info" id="f1">
-                        <ul class="dscpr">
-                            <li>მომსახურეობა: ვებ მომსახურეობა</li>
-                            <li>დიზაინი: ინდივიდი</li>
-                            <li>სტატუსი: აქტიური</li>
-                            <li>ავტორი: M PRODUCTION</li>
-                        </ul>
-                        <button class="btn btn-outline-secondary algeti"><a href="http://progresi.com.ge" target="_blank">საიტზე გადასვლა</a></button>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12  p-container">
-                    <img src="images/person-2.jpg"  alt="">
-                    <h4 class="name-p">ტიტანიკი 2 </h4>
-                    <div class="show-info" id="f2">
-                        <button class="btn btn-outline-light algeti" onclick="videoshow()">ტრეილერი</button>
-                        <ul class="dscpr">
-                            <li>მომსახურეობა: კინო მატოგრაფია</li>
-                            <li>აუდიო: კომპოზიტორი</li>
-                            <li>სტატუსი: დასასრული 20/04/2020</li>
-                            <li>ავტორი: M PRODUCTION</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12  p-container">
-                    <img src="images/photo-5.jpg"  alt="">
-                    <h4 class="name-p">უდიპლომო სასიძო 2</h4>
-                    <div class="show-info" id="f3">
-                        <button class="btn btn-outline-light algeti" onclick="music_show()">საუნდრეკი</button>
-                        <ul class="dscpr">
-                            <li>მომსახურეობა: კომპოზიტორი</li>
-                            <li>სტატუსი: დასრლებული </li>
-                            <li>ავტორი: M PRODUCTION</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="staffs" class="section-fade-in " style="background: url(images/photo-8.jpg);background-size: cover" data-type="background" data-speed="5">
-        <div class="staffs-content" data-type="content">
-            <h3 class="tomaso text-center " style="padding: 10% 0 0 0">გუნდი</h3>
-            <hr style="width: 200px;margin: auto ;height: 1px; background:#c5623e ">
-            <div class="st-content rows">
-                <div class="st col-md-4 col-sm-12">
-                    <img src="images/M-kuprava.jpg" alt="">
-                    <div class="down">
-                        <h3>მიხეილ კუპრავა</h3>
-                        <p>მფლობელი / დეველოპერი</p>
-                    </div>
-                </div>
-                <div class="st col-md-4 col-sm-12">
-                    <img src="images/T-mamisashvili.jpg" alt="">
-                    <div class="down">
-                        <h4>თეიმურაზ მამისაშვილი</h4>
-                        <p>დამდმელი რეჟისორი</p>
-                    </div>
-                </div>
-                <div class="st col-md-4 col-sm-12">
-                    <img src="images/G-tskovrebadze.jpg" alt="">
-                    <div class="down">
-                        <h4>გიორგი ცხოვრებაძე</h4>
-                        <p>კომპოზიტორი</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="contact" class="" style="background: url(images/photo-4.jpg);background-size: cover" data-type="background" data-speed="5">
-        <div class="contact-content">
-            <h3 class="tomaso text-center " style="padding: 10% 0 0 0;color: white">კონტაქტი</h3>
-            <hr style="width: 200px;margin: auto ;height: 1px; background:#c5623e ">
-            <div class="c-content">
-                <div class="btns">
-                    <button class="mail">E-mail</button>
-                    <button><li><a  href="#">facebook.com</a></li></button>
-                </div>
-                <div class="email">
-                    <span class="exit">X</span>
-                    <form action="js/contact.php" method="post">
-                        <input type="text" name="name" placeholder="სახელი">
-                        <input type="email" name="mail" placeholder="მეილი">
-                        <input type="text" name="txt" placeholder="შეტყობინება">
-                        <button type="submit" class="submit">გაგზავნა</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="rows">
-        <div class="inner">
-            <span class="float-left text-uppercase">m production</span>
+    <div class="container_home grotesk" id="home">
+        <div class="some">
+            <h1> m production</h1>
+            <div class="line"></div>
+            <h3>partner: AETHERS</h3>
             <br>
-            <span class="cruse"><span style="padding:  0 10px">•</span>M-prdct@info.com </span>
-            <br>
-            <span class="cruse"><span style="padding:  0 10px">•</span>+995 XXX XX XX XX </span>
-            <div class="mediaa ">
-                <button class="btn"><a href="#" class="btn badge-secondary">facebook.com</a></button>
-                <button class="btn"><a href="#" class="btn badge-secondary">Youtube.com</a></button>
+            <div class="logos">
+                <img src="img/m-logo.png" alt="">
+                <img src="img/logo-aethers-1.png" alt="">
             </div>
         </div>
-        <div class="legal">
-            <p>&copy; 2020 M-PRODUCTION. All Rights Reserved</p>
+    </div>
+    <div id="about">
+        <div class="rows">
+            <div class="about_heading dejavu">
+                <h2 class="text-center pt-5">შესახებ</h2>
+                <div class="line m-auto" ></div>
+                <p class="text-center p-5 ">
+                    M PRODUCTION არის უნივერსალური მომსახურეობა რომელიც გთავაზობთ, არა მარტო ვებ დეველოპერიას ასევე ვიდეო რგოლების დამზადებას.
+                    ჩვენი ნამუშევრები არის დამზადებული ლიცენზირებული პროგრამებით, როგორიცაა WebStorm, Adobe - ეს ნაწარმი და Magix.
+                    ხოლო ჩვენი ტექნოლოგია არის ვებ საიტის დარგში: HTML, CSS, JavaScript, JQUERY
+                </p>
+                <div class="partner text-uppercase">
+                    <h2>aethers</h2>
+                    <button class="btn badge-light ml-4 mt-2 ">შესახებ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="support" class="text-center rows">
+        <h2 class="pt-5">მომსახურეობა</h2>
+        <div class="container supp_list">
+            <div class="s_list col-md-4 col-sm-12">
+                <img src="img/cover-1.jpg" alt=""  class="cover-img">
+                <div class="description-txt">
+                    <h2>ვებ დიზაინერი</h2>
+                    <h2>ვებ პროგრამისტი</h2>
+                </div>
+            </div>
+            <div class="s_list col-md-4 col-sm-12">
+                <img src="img/cover-2.jpg" alt=""  class="cover-img">
+                <div class="description-txt">
+                    <h2>რეკლამა</h2>
+                    <h2>კინო მატოგრაფია</h2>
+                </div>
+            </div>
+            <div class="s_list col-md-4 col-sm-12">
+                <img src="img/cover-3.jpg" alt=""  class="cover-img">
+                <div class="description-txt">
+                    <h2>კომპოზიტორი</h2>
+                    <h2>მუსიკა</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="porfolios">
+        <h2 class="pt-5 text-center dejavu">ნამუშევრები</h2>
+        <div class="mySlides fades">
+            <div class="porfolios-list mt-5 row">
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/logo.png" alt="">
+                    <div class="description_txt" style="width: 425px">
+                        <h2 class="badge-dark p-2">progress project</h2>
+                        <h3>მომსახურეობა: ვები</h3>
+                        <h3>სტატუსი: აქტიური</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">go Website</a></button>
+                    </div>
+                </div>
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/cover-1.jpg" alt="">
+                    <div class="description_txt" style="width: 423px">
+                        <h2 class="badge-dark p-2">უდიპლომო სასიძო 2</h2>
+                        <h3>მომსახურეობა: კინო</h3>
+                        <h3>სტატუსი: 08/05/2021 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#"  id="1" onclick="Function(1)"  style="width: 200px">Trailer</a></button>
+                    </div>
+                </div>
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/cover-2.jpg" alt="">
+                    <div class="description_txt" style="width: 424px">
+                        <h2 class="badge-dark p-2">ქვევრი 2</h2>
+                        <h3>მომსახურეობა: მუსიკა</h3>
+                        <h3>სტატუსი: 08/07/2020 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">soundtrack</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides fades">
+            <div class="porfolios-list mt-5 row">
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/photo-1.jpg" alt="">
+                    <div class="description_txt" style="width: 425px">
+                        <h2 class="badge-dark p-2">ქვევრი 2</h2>
+                        <h3>მომსახურეობა: მუსიკა</h3>
+                        <h3>სტატუსი: 08/07/2020 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">go Website</a></button>
+                    </div>
+                </div>
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/photo-2.jpg" alt="">
+                    <div class="description_txt" style="width: 423px">
+                        <h2 class="badge-dark p-2">ქვევრი 2</h2>
+                        <h3>მომსახურეობა: მუსიკა</h3>
+                        <h3>სტატუსი: 08/07/2020 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">Trailer</a></button>
+                    </div>
+                </div>
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/photo-3.jpg" alt="">
+                    <div class="description_txt" style="width: 424px">
+                        <h2 class="badge-dark p-2">ქვევრი 2</h2>
+                        <h3>მომსახურეობა: მუსიკა</h3>
+                        <h3>სტატუსი: 08/07/2020 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">soundtrack</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides fades">
+            <div class="porfolios-list mt-5 row">
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/photo-4.jpg" alt="">
+                    <div class="description_txt" style="width: 425px">
+                        <h2 class="badge-dark p-2">ქვევრი 2</h2>
+                        <h3>მომსახურეობა: მუსიკა</h3>
+                        <h3>სტატუსი: 08/07/2020 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">go Website</a></button>
+                    </div>
+                </div>
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/photo-5.jpg" alt="">
+                    <div class="description_txt" style="width: 423px">
+                        <h2 class="badge-dark p-2">ქვევრი 2</h2>
+                        <h3>მომსახურეობა: მუსიკა</h3>
+                        <h3>სტატუსი: 08/07/2020 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">Trailer</a></button>
+                    </div>
+                </div>
+                <div class="porfos-list col-md-4 col-sm-12">
+                    <img src="img/photo-6.jpg" alt="">
+                    <div class="description_txt" style="width: 424px">
+                        <h2 class="badge-dark p-2">ქვევრი 2</h2>
+                        <h3>მომსახურეობა: მუსიკა</h3>
+                        <h3>სტატუსი: 08/07/2020 -დან</h3>
+                        <button class="btn"><a  class="btn btn-outline-dark text-uppercase" href="#" style="width: 200px">soundtrack</a></button>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)">1</span>
+            <span class="dot" onclick="currentSlide(2)">2</span>
+            <span class="dot" onclick="currentSlide(3)">3</span>
+        </div>
+    </div>
+    <div id="staffs">
+        <h2 class="pt-5 text-center dejavu">გუნდი</h2>
+        <div class="staffs-list row mt-5">
+            <div class="staff col-md-4 col-sm-12 ">
+                <img src="img/photo-4.jpg" alt="">
+                <div class="description_txt2">
+                    <h3>სახელი გვარი</h3>
+                    <h4>პოზიცია</h4>
+                </div>
+            </div>
+            <div class="staff col-md-4 col-sm-12 ">
+                <img src="img/photo-4.jpg" alt="">
+                <div class="description_txt2">
+                    <h3>სახელი გვარი</h3>
+                    <h4>პოზიცია</h4>
+                </div>
+            </div>
+            <div class="staff col-md-4 col-sm-12 ">
+                <img src="img/photo-4.jpg" alt="">
+                <div class="description_txt2">
+                    <h3>სახელი გვარი</h3>
+                    <h4>პოზიცია</h4>
+                </div>
+            </div>
+            <div style="margin: 135px 0 0 0; width: 100%" class="row">
+                <div class="staff col-md-4 col-sm-12 ">
+                    <img src="img/photo-4.jpg" alt="">
+                    <div class="description_txt2">
+                        <h3>სახელი გვარი</h3>
+                        <h4>პოზიცია</h4>
+                    </div>
+                </div>
+                <div class="staff col-md-4 col-sm-12 ">
+                    <img src="img/photo-4.jpg" alt="">
+                    <div class="description_txt2">
+                        <h3>სახელი გვარი</h3>
+                        <h4>პოზიცია</h4>
+                    </div>
+                </div>
+                <div class="staff col-md-4 col-sm-12 ">
+                    <img src="img/photo-4.jpg" alt="">
+                    <div class="description_txt2">
+                        <h3>სახელი გვარი</h3>
+                        <h4>პოზიცია</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="row text-uppercase">
+        <div class="color-bg">
+            <h2 class="pt-5 text-center dejavu">კონტაქტი</h2>
+            <div class="contact_form pt-5">
+                <form action="#" method="post">
+                    <input type="text" name="Name" placeholder="სახელი">
+                    <input type="email" name="email" placeholder="ე-მაილი">
+                    <input type="text" name="subject" placeholder="თემა">
+                    <input type="text" name="text"  placeholder="შეტყობინება">
+                    <div style="margin: 25px auto;width: 80px">
+                        <button type="submit" class="btn btn-outline-dark">გაგზავნა</button>
+                    </div>
+                </form>
+                <div class="addrs">
+                    <p>ლორემ იპსუმის 11ა</p>
+                    <p>lorem@gmail.com</p>
+                    <p>+995 XXX XX XX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="row">
+        <div class="footer_content">
+            <div class="footer_about">
+                <h5 style="color: #bfbfbf">შესახებ</h5>
+                <p style="color: #6d6d6d">M PRODUCTION არის უნივერსალური მომსახურეობა რომელიც გთავაზობთ, არა მარტო ვებ დეველოპერიას ასევე ვიდეო რგოლების დამზადებას.
+                    ჩვენი ნამუშევრები არის დამზადებული ლიცენზირებული პროგრამებით, როგორიცაა WebStorm, Adobe - ეს ნაწარმი და Magix.
+                    ხოლო ჩვენი ტექნოლოგია არის ვებ საიტის დარგში: HTML, CSS, JavaScript, JQUERY</p>
+            </div>
+            <div class="footer_categories">
+                <h5 style="color: #bfbfbf">მომსახურეობა</h5>
+                <p style="color: #6d6d6d">ვებ დეველოპერი</p>
+                <p style="color: #6d6d6d">კონო მატოგრაფია</p>
+                <p style="color: #6d6d6d">კომპოზიტორი</p>
+            </div>
+            <div class="footer_menu">
+                <a href="#home" onclick="homepg()">
+                    <img src="img/arrow.svg" alt="" style="width: 100%;object-fit: cover">
+                </a>
+            </div>
+            <hr style="width: 100%;height:1px;background:#6d6d6d;margin: 40px 0">
+            <div class="footer_2">
+                <p>2020  &copy; m production, ყველა უფლება დაცულია </p>
+                <div class="soc_media">
+                    <a href="#"><img src="img/facebook%20(1).svg" alt=""></a>
+                    <a href="#"><img src="img/youtube.svg" alt=""></a>
+                    <a href="#"><img src="img/instagram.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
     </footer>
-
-<div id="audio-section">
-    <div class="bends-contect">
-        <div class="text-right">
-            <button class="btn btn-outline-light algeti" id="exit" onclick="music_show()">X</button>
-        </div>
-        <div id="mainwrap">
-            <div id="nowPlay">
-                <span id="npAction" class="tomaso">პაუზა...</span><span id="npTitle" class="dejavu"></span>
-            </div>
-            <div id="audiowrap">
-                <div id="audio0">
-                    <audio id="audio1" preload controls>Your browser does not support HTML5 Audio!</audio>
-                </div>
-                <div id="tracks">
-                    <a id="btnPrev">&vltri;</a><a id="btnNext">&vrtri;</a>
-                </div>
-            </div>
-            <div id="plwrap" class="algeti" >
-                <ul id="plList"></ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="js/jquery-3.3.1.slim.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src='js/plyr.min.js'></script>
-<script  src="js/audios.js"></script>
-<script src="js/plugins.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
-
-
-
+   
 </body>
 </html>
